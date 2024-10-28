@@ -11,6 +11,8 @@
 
 [24号橋](./24号橋/index.htm)
 
+`[24号橋](./24号橋/index.htm)`こういう風に引用すると、リンクが貼れます。自動的にWEBページが表示されます。
+
 
 例：
 
@@ -28,3 +30,6 @@
 [78号橋](https://storage.net-fs.com/hosting/8236231/1/)
 
 [64号橋](https://storage.net-fs.com/hosting/8236231/3/)
+
+
+[清水内橋](./清水内橋/index.htm)
