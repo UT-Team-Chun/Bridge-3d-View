@@ -23,7 +23,7 @@
 
 ## View
 
-[納豆橋](https://storage.net-fs.com/hosting/8236231/4/)
+[納豆橋](./納豆橋/index.htm)
 
 [柳橋](https://storage.net-fs.com/hosting/8236231/2/)
 
