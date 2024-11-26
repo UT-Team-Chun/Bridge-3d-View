@@ -12,8 +12,7 @@
 例：
 
 ./24号橋
-
-[https://ut-team-chun.github.io/3dvista-webview/24号橋](https://ut-team-chun.github.io/3dvista-webview/24号橋)
+[https://ut-team-chun.github.io/Bridge-3d-View/24号橋](https://ut-team-chun.github.io/Bridge-3d-View/24%E5%8F%B7%E6%A9%8B/index.htm)
 
 
 ## View
