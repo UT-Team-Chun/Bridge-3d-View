@@ -75,5 +75,5 @@
 
 [橋本橋](./橋本橋/index.htm)
 
-[草場橋](./草場橋/index.htm)
+[草場橋](https://ut-team-chun.github.io/Bridge_360view_2/%E8%8D%89%E5%A0%B4%E6%A9%8B/)
 
