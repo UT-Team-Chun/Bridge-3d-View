@@ -4,29 +4,25 @@ import glob
 from tqdm import tqdm
 
 def compress_jpg(input_path, quality=80):
-    """
-    压缩单个JPG文件
-    :param input_path: 输入文件路径
-    :param quality: 压缩质量（1-100）
-    """
+
     try:
-        # 打开图片
+        # open image
         img = Image.open(input_path)
-        # 获取原始文件大小
+        # get original file size
         original_size = os.path.getsize(input_path)
         
-        # 创建临时文件名
+        # get file directory and name
         directory = os.path.dirname(input_path)
         filename = os.path.basename(input_path)
         temp_path = os.path.join(directory, f"temp_{filename}")
         
-        # 保存压缩后的图片
+        # save compressed image to temp file
         img.save(temp_path, 'JPEG', quality=quality, optimize=True)
         
-        # 获取压缩后的文件大小
+        # get compressed file size
         compressed_size = os.path.getsize(temp_path)
         
-        # 如果压缩后的文件更小，则替换原文件
+        # replace original file with compressed file if smaller
         if compressed_size < original_size:
             os.replace(temp_path, input_path)
             print(f"成功压缩 {input_path}")
@@ -41,11 +37,8 @@ def compress_jpg(input_path, quality=80):
         print(f"处理 {input_path} 时出错: {str(e)}")
 
 def compress_all_jpg_in_directory(root_dir):
-    """
-    递归压缩目录下所有的JPG文件
-    :param root_dir: 根目录路径
-    """
-    # 获取所有jpg文件（不区分大小写）
+
+    # get all jpg files
     jpg_files = []
     for ext in ('*.jpg', '*.jpeg', '*.JPG', '*.JPEG'):
         jpg_files.extend(glob.glob(os.path.join(root_dir, '**', ext), recursive=True))
@@ -56,7 +49,7 @@ def compress_all_jpg_in_directory(root_dir):
     
     print(f"找到 {len(jpg_files)} 个JPG文件")
     
-    # 压缩每个文件
+    # compress jpg files
     for jpg_file in tqdm(jpg_files, desc="compressing"):
         compress_jpg(jpg_file)
 
