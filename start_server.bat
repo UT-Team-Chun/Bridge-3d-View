@@ -1,6 +1,13 @@
 @echo off
 echo Starting local server...
 
+REM Check and create required directories
+if not exist "nginx\temp" mkdir "nginx\temp"
+if not exist "nginx\temp\client_body_temp" mkdir "nginx\temp\client_body_temp"
+if not exist "nginx\temp\proxy_temp" mkdir "nginx\temp\proxy_temp"
+if not exist "nginx\temp\fastcgi_temp" mkdir "nginx\temp\fastcgi_temp"
+if not exist "nginx\logs" mkdir "nginx\logs"
+
 REM Check nginx 
 IF NOT EXIST "nginx\nginx.exe" (
   echo Error: nginx.exe not found!
