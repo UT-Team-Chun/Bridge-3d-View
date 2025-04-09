@@ -24,9 +24,9 @@ start nginx.exe
 cd ..
 
 REM start http server
-start http://localhost:8080
+start http://localhost:8070
 
-echo Server is running at http://localhost:8080
+echo Server is running at http://localhost:8070
 echo DO NOT close this window if you want to keep the server running.
 echo To stop the server, just close this window.
 
